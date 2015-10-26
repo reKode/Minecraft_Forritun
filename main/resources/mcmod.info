@@ -1,0 +1,16 @@
+[
+    {
+      "modid": "skemamod",
+      "name": "Skema Moddið",
+      "description": "Þetta modd er smíðað á Skema Forritunar Námskeiði!.",
+      "version": "${version}",
+      "mcversion": "${mcversion}",
+      "url": "www.skema.is",
+      "updateUrl": "",
+      "authorList": ["Addinator"],
+      "credits": "Arnar Valur Jónsson",
+      "logoFile": "",
+      "screenshots": [],
+      "dependencies": []
+    }
+]
