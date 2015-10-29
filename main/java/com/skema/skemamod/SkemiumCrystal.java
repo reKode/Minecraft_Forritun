@@ -8,7 +8,7 @@ public class SkemiumCrystal extends Item {
 	public SkemiumCrystal(String name) 
 	{
 		setUnlocalizedName(name);
-		this.setTextureName(SkemaMain.MODID + ":" + name);
+		this.setTextureName(SkemaMod.MODID + ":" + name);
 		this.setCreativeTab(CreativeTabs.tabMisc);
 	}
 }

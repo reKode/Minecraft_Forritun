@@ -13,7 +13,7 @@ public class SkemiumHoe extends ItemHoe {
 		super(material);
 		
 		setUnlocalizedName(name);
-		setTextureName(SkemaMain.MODID + ":" + name);
+		setTextureName(SkemaMod.MODID + ":" + name);
 		setCreativeTab(CreativeTabs.tabCombat);
 	}
 }

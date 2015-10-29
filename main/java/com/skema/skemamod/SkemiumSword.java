@@ -10,7 +10,7 @@ public class SkemiumSword extends ItemSword {
 		super(material);
 		
 		setUnlocalizedName(name);
-		setTextureName(SkemaMain.MODID + ":" + name);
+		setTextureName(SkemaMod.MODID + ":" + name);
 		setCreativeTab(CreativeTabs.tabCombat);
 	}
 }

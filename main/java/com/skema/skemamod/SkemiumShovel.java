@@ -11,7 +11,7 @@ public class SkemiumShovel extends ItemSpade {
 		super(material);
 		
 		setUnlocalizedName(name);
-		setTextureName(SkemaMain.MODID + ":" + name);
+		setTextureName(SkemaMod.MODID + ":" + name);
 		setCreativeTab(CreativeTabs.tabCombat);
 	}
 

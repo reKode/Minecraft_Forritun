@@ -12,8 +12,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = SkemaMain.MODID, version = SkemaMain.VERSION)
-public class SkemaMain
+@Mod(modid = SkemaMod.MODID, version = SkemaMod.VERSION)
+public class SkemaMod
 {
     public static final String MODID = "skemamod";
     public static final String VERSION = "1.0";
@@ -40,6 +40,11 @@ public class SkemaMain
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	/*
+    	 * Hér inn í preInit{} fallinu kóðum við breytunar okkar og tengjum það við viðeigandi klasa
+    	 * Og skráum svo breytuna með GameRegistry í Minecraft Moddið okkar. 
+    	 */
+    	
     	/***** SKEMIUM *****/
     	skemiumCrystal = new SkemiumCrystal("Skemium");
     	GameRegistry.registerItem(skemiumCrystal, "Skemium");
@@ -63,6 +68,10 @@ public class SkemaMain
     	/***** SKEMIUM HOE *****/
     	skemium_hoe = new SkemiumHoe(skemium, "SkemiumHoe");
     	GameRegistry.registerItem(skemium_hoe, "SkemiumHoe");
+    	
+    	/* 
+    	 *  Inn í preInit{} fallinu kóðum við einnig inn CraftinTable uppskriftir fyrir nýju hlutina okkar.
+    	 *  */
     	
     	//SKEMIUM SWORD RECIPE
     	GameRegistry.addRecipe(new ItemStack(skemium_sword),
