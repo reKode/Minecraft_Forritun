@@ -33,46 +33,38 @@ public class SkemaMod
     	public static Item skemium_axe;
     	public static Item skemium_hoe;
     
-    //Blocks
-    
-    
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	/*
-    	 * Hér inn í preInit{} fallinu kóðum við breytunar okkar og tengjum það við viðeigandi klasa
-    	 * Og skráum svo breytuna með GameRegistry í Minecraft Moddið okkar. 
-    	 */
-    	
-    	/***** SKEMIUM *****/
-    	skemiumCrystal = new SkemiumCrystal("Skemium");
+    	//SKEMIUM
+    	skemiumCrystal = new Skemium("Skemium");
     	GameRegistry.registerItem(skemiumCrystal, "Skemium");
     	
-    	/***** SKEMIUM SWORD *****/
+    	//SKEMIUM SWORD
     	skemium_sword = new SkemiumSword(skemium, "SkemiumSword");
     	GameRegistry.registerItem(skemium_sword, "SkemiumSword");
     	
-    	/***** SKEMIUM SHOWEL *****/
+    	//SKEMIUM SHOWEL
     	skemium_shovel = new SkemiumShovel(skemium, "SkemiumShovel");
     	GameRegistry.registerItem(skemium_shovel, "SkemiumShovel");
     	
-    	/***** SKEMIUM PICKAXE *****/
+    	//SKEMIUM PICKAXE
     	skemium_pickaxe = new SkemiumPickaxe(skemium, "SkemiumPickaxe");
     	GameRegistry.registerItem(skemium_pickaxe, "SkemiumPickaxe");
     	
-    	/***** SKEMIUM AXE *****/
+    	//SKEMIUM AXE
     	skemium_axe = new SkemiumAxe(skemium, "SkemiumAxe");
     	GameRegistry.registerItem(skemium_axe, "SkemiumAxe");
     	
-    	/***** SKEMIUM HOE *****/
+    	//SKEMIUM HOE
     	skemium_hoe = new SkemiumHoe(skemium, "SkemiumHoe");
     	GameRegistry.registerItem(skemium_hoe, "SkemiumHoe");
-    	
-    	/* 
-    	 *  Inn í preInit{} fallinu kóðum við einnig inn CraftinTable uppskriftir fyrir nýju hlutina okkar.
-    	 *  */
-    	
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
     	//SKEMIUM SWORD RECIPE
     	GameRegistry.addRecipe(new ItemStack(skemium_sword),
     			" X ",
@@ -114,14 +106,5 @@ public class SkemaMod
     			" I ",
     			" I ",
     			'X', skemiumCrystal, 'I', Items.stick );
-    	
-    	//Skemgen skemium_gen = new Skemgen();
-    	//GameRegistry.registerWorldGenerator(skemium_gen, 0);
-    }
-    
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-    	
     }
 }
