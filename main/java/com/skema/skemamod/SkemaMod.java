@@ -1,5 +1,6 @@
 package com.skema.skemamod;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -33,33 +34,45 @@ public class SkemaMod
     	public static Item skemium_axe;
     	public static Item skemium_hoe;
     
+    //Blocks
+		public static Block skemiumRock;
+		public static Block skemiumBlock;
+    
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	//SKEMIUM
+    	//SKEMIUM (Item)
     	skemiumCrystal = new Skemium("Skemium");
     	GameRegistry.registerItem(skemiumCrystal, "Skemium");
     	
-    	//SKEMIUM SWORD
+    	//SKEMIUM SWORD (Item)
     	skemium_sword = new SkemiumSword(skemium, "SkemiumSword");
     	GameRegistry.registerItem(skemium_sword, "SkemiumSword");
     	
-    	//SKEMIUM SHOWEL
+    	//SKEMIUM SHOWEL (Item)
     	skemium_shovel = new SkemiumShovel(skemium, "SkemiumShovel");
     	GameRegistry.registerItem(skemium_shovel, "SkemiumShovel");
     	
-    	//SKEMIUM PICKAXE
+    	//SKEMIUM PICKAXE (Item)
     	skemium_pickaxe = new SkemiumPickaxe(skemium, "SkemiumPickaxe");
     	GameRegistry.registerItem(skemium_pickaxe, "SkemiumPickaxe");
     	
-    	//SKEMIUM AXE
+    	//SKEMIUM AXE (Item)
     	skemium_axe = new SkemiumAxe(skemium, "SkemiumAxe");
     	GameRegistry.registerItem(skemium_axe, "SkemiumAxe");
     	
-    	//SKEMIUM HOE
+    	//SKEMIUM HOE (Item)
     	skemium_hoe = new SkemiumHoe(skemium, "SkemiumHoe");
     	GameRegistry.registerItem(skemium_hoe, "SkemiumHoe");
+    	
+    	//SKEMIUM ROCK  (Block)
+    	skemiumRock = new SkemiumRock("SkemiumRock", skemiumCrystal);
+    	GameRegistry.registerBlock(skemiumRock, "SkemiumRock");
+    	
+    	//SKEMIUM BLOCK (block)
+    	skemiumBlock = new SkemiumBlock("SkemiumBlock");
+    	GameRegistry.registerBlock(skemiumBlock, "SkemiumBlock");
     }
     
     @EventHandler
@@ -106,5 +119,16 @@ public class SkemaMod
     			" I ",
     			" I ",
     			'X', skemiumCrystal, 'I', Items.stick );
+    	
+    	//SKEMIUM BLOCK
+    	GameRegistry.addRecipe(new ItemStack(skemiumBlock),
+    			"SSS",
+    			"SSS",
+    			"SSS",
+    			'S', skemiumCrystal);
+    	
+    	GameRegistry.addShapelessRecipe(new ItemStack(SkemaMod.skemiumCrystal, 9),
+    			SkemaMod.skemiumBlock
+    			);
     }
 }

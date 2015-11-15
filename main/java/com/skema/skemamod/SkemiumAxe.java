@@ -14,6 +14,6 @@ public class SkemiumAxe extends ItemAxe {
 		
 		setUnlocalizedName(name);
 		setTextureName(SkemaMod.MODID + ":" + name);
-		setCreativeTab(CreativeTabs.tabCombat);
+		setCreativeTab(CreativeTabs.tabTools);
 	}
 }

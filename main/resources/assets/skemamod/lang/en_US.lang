@@ -4,3 +4,5 @@ item.SkemiumPickaxe.name=Skemium Pickaxe
 item.SkemiumHoe.name=Skemium Hoe
 item.SkemiumAxe.name=Skemium Axe
 item.Skemium.name=Skemium
+tile.SkemiumBlock.name=Skemium Kubbur
+tile.SkemiumRock.name=Skemium Grjót
